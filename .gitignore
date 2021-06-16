@@ -1,3 +1,4 @@
 conda_venv/
 .idea/
 models/
+*.pyc

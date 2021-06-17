@@ -6,7 +6,14 @@ app = flk.Flask(__name__)
 @app.route('/index')
 def index():
 
-    return flk.render_template('index.html')
+    # save user input in query
+    query = flk.request.args.get('query')
+
+    return flk.render_template(
+        'index.html',
+        query=query,
+        samples=[]
+    )
 
 def main():
     app.run(host='0.0.0.0', port=3001, debug=True)
